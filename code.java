@@ -82,7 +82,4 @@ public static void main(String[] args) {
         ?System.out.println("The contact's entries are the same")
         :System.out.println("The contact's entries are not the same");
      :System.out.println("These are different contacts");
-
    }
-}
-           
