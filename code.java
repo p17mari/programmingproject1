@@ -8,16 +8,14 @@
 public class Contact { 
    //γίνεται δήλωση μεταβλητών.
    private String fullname;
-   private double phonenumber=6948012345;
+   private double phonenumber;
    private String email; 
+   private boolean entry;
    }
-//δηλώνεται η μεταβλητη contacts.  
-   public static int contacts=0;
 //κατασκευάζονται constructor.   
 public Contact(String fullname, String email) {
    this.fullname=fullname;
    this.email=email;
-   contacts++;
    }
 public Contact(String fullname, String email, double phonenumber) {
    this(fullname, email);
@@ -50,11 +48,17 @@ protected void finalize() {
                 +" and has this phone number " +this.phonenumber
 //υπολογίζεται η main.
 public static void main(String[] args) {
+    Contact invalid1 = new Contact("Ringas Dimitrios", "riggas-ionio.gr");
+    invalid1.setPhonenumber=113513701
+    System.out.println(invalid1.toString());
+    Contact invalid2= new Contact("Ringas Dimitrios"," riggas@.ioniogr");
+    invalid2.setPhonenumber=223513701
   // Χρησιμόποιειται μέθοδος equals για να συγκρίνουμε τα 
-        System.out.println(george1.getFullname() == new String("Dimitrios Riggas"));    
-        System.out.println(george1.getFullname().equals( new String("Dimitrios Riggas") )); 
-        System.out.println(george1.getFullname() == "Dimitrios");
-           
+       //Fullname
+        System.out.println(george1.getFullname() == new String("Dimitrios Ringas"));    
+        System.out.println(george1.getFullname().equals( new String("Dimitrios Ringas") )); 
+        System.out.println(george1.getFullname() == "Dimitrios Ringas");
+        //email  
         System.out.println(george1get.Email() == new String(""));    
         System.out.println(george1.getEmail().equals( new String("") ))
         System.out.println(george1.getEmail() == "");
