@@ -2,7 +2,7 @@
 Π2017089 
 Αργυρώ Μαριόλη
 14/11/18
-Δεν κατάφερα να κάνω χρήση μεταβλητής boolean,να θέσω ελάχιστο και μέγιστο στην double και να χρησιμοποιήσω μέθοδο is duplicate.
+Δεν κατάφερα να κάνω χρήση μεταβλητής boolean,να θέσω ελάχιστο και μέγιστο στην double.
 */
 /**υπολογίζεται η κλάση Contact με να περιέχει data members: 
 fullname: Oνοματεπώνυμo τύπος String, phonenumber: Τηλεφωνικός	 αριθμός	τυπου double,	email:	 τύπου String.*/
@@ -52,34 +52,23 @@ public static void setPhonenumber(double phonenumber) {
     }
 //υπολογίζεται η main.
 public static void main(String[] args) {
-   //ορίζεται παράδειγμα 1
-    Contact invalid1 = new Contact("Ringas Dimitrios", "113513701");
+   //ορίζεται παράδειγμα valid1
+    Contact valid1 = new Contact(){
     invalid1.setEmail=riggas-ionio.gr
-    System.out.println(invalid1.toString());
-   //ορίζεται παράδειγμα 2
-    Contact invalid2= new Contact("Ringas Dimitrios","223513701");
-    invalid2.setEmail=riggas@.ioniogr
-    System.out.println(invalid2.toString()); 
-    // Χρησιμόποιειται μέθοδος equals για να συγκρίνουμε τα invalid1,invalid2.
-   if (invalid1.fullname.equals.invalid2.fullname)
-     ?System.out.println("These two contacts refer to the same person");
-       if (invalid1.email.equals.invalid2.email && invalid1.phonenumber.equals.invalid2.phonenumber)
-        ?System.out.println("The contact's entries are the same")
-        :System.out.println("The contact's entries are not the same");
-     :System.out.println("These are different contacts");
-   //ορίζονται ορθά στοιχεία 1
-    Contact valid1= new Contact("Ringas Dimitrios","6948012345");
-    valid1.setEmail=riggas@ionio.gr
-    System.out.println(valid1.toString());  
-   //οριζονταί ορθά στοιχεια 2
-    Contact valid2= new Contact("Ringas Dimitrios","2661012345");
-    valid2.setEmail=riggas@ionio.gr
+    valid1.setFullname("Dimitrios Ringas");
+    valid1.setEmail("riggas-ionio.gr");
+    valid1.setEmail("riggas@ionio.gr");
+    valid1.setPhonenumber(6948012345));
+    valid1.setPhonenumber(0661341785);
+    System.out.println(valid1.toString());
+    }
+   //ορίζεται παράδειγμα valid2
+   valid2 = new Contact("Ringas Dimitrios", 6948012345);
+    System.out.println("Same person? "+ valid2.isDuplicate(valid1) );//χρήση μεθόδου isDuplicate.
+    valid2.setEmail=riggas@.ioniogr
     System.out.println(valid2.toString()); 
-    // Χρησιμόποιειται μέθοδος equals για να συγκρίνουμε τα valid1,valid2.
-     if (valid1.fullname.equals.valid2.fullname)
-     ?System.out.println("These two contacts refer to the same person");
-       if (valid1.email.equals.valid2.email && valid1.phonenumber.equals.valid2.phonenumber)
-        ?System.out.println("The contact's entries are the same")
-        :System.out.println("The contact's entries are not the same");
-     :System.out.println("These are different contacts");
+    System.out.println("Equal contact entry? "+ c2.equals(c1) );// χρήση μεθόδου equals.
+    System.out.println(valid1);
+    System.out.println(valid2);
+    
    }
