@@ -2,10 +2,10 @@
 Π2017089 
 Αργυρώ Μαριόλη
 14/11/18
-Δεν κατάφερα να κάνω χρήση μεταβλητής boolean.
+Δεν κατάφερα να περιερίσω τους χαρακτήρες που χρησιμοποιούνται στο email.
 */
-/**υπολογίζεται η κλάση Contact με να περιέχει data members: 
-fullname: Oνοματεπώνυμo τύπος String, phonenumber: Τηλεφωνικός	 αριθμός	τυπου long,	email:	 τύπου String.*/
+/** Υπολογίζεται η κλάση Contact με να περιέχει data members: 
+fullname: Oνοματεπώνυμo τύπος String, phonenumber: Τηλεφωνικός	 αριθμός	τυπου long,	email: τύπου String.*/
 public class Contact { 
    //γίνεται δήλωση μεταβλητών.
    private String fullname;
@@ -51,6 +51,16 @@ public static void setPhonenumber(long phonenumber) {
        contact = fullName + ":\t" + phonenumber + ";\t" + email;
         return contact
     }
+//επιστρέφει boolean τιμή που δηλώνει αν το Contact αναπαριστά ίδιο πρόσωπο με το αντικείμενο Contact other.
+ public boolean equals(Contact other)
+   {
+      return this.fullName==other.fullName && this.phonenumber==other.phonenumber && this.email==other.email;
+   }
+//επιστρέφει boolean τιμή που δηλώνει αν το Contact είναι όμοιο με το αντικείμενο Contact other.
+  public boolean isDuplicate(Contact other)
+   {
+      return this.phonenumber == other.phonenumber || this.email == other.email;
+   }
 //υπολογίζεται η main.
 public static void main(String[] args) {
    //ορίζεται παράδειγμα valid1
@@ -69,7 +79,7 @@ public static void main(String[] args) {
     System.out.println("Same person? "+ valid2.isDuplicate(valid1) );
     valid2.setEmail=riggas@.ionio.gr
     System.out.println(valid2.toString()); 
-   //χρήση μεθόδου equals για να sόλα τα στοιχεία του valid2 με του valif
+   //χρήση μεθόδου equals για να συγκριθούν όλα τα στοιχεία του valid2 με του valid1.
     System.out.println("Equal contact entry? "+ valid2.equals(valid1) );
     System.out.println(valid1);
     System.out.println(valid2);
